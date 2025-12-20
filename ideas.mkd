@@ -1,0 +1,37 @@
+# *Ideas* 1.0.0*
+
+___
+
+* **1.** Learn **C**, **C+**, **C++** or **C#**
+
+___
+
+* **2.** Do something in ***C*** and ***C++***
+
+___   
+
+* **3.** Learn ***CSS***
+
+___
+
+* **4.** Make a functioning website using ***Javascript***
+
+___   
+
+* **5.** ***Make a coding language***
+
+___
+
+* **6.** Use that language to ***make text move***
+
+___
+
+* **7.** *Optional: **Publicize our language***
+
+___
+
+* **8.** *Optional: **Update our language***
+
+___
+
+****More updates coming soon!***
