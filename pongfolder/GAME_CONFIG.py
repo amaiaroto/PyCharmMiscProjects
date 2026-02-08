@@ -16,15 +16,15 @@ class GameConfig:
         """
 
         # Display
-        self.screen: pygame.display = pygame.display.set_mode((2000, 1200), pygame.FULLSCREEN)
+        self.screen: pygame.Surface = pygame.display.set_mode((2000, 1200), pygame.FULLSCREEN)
         self.S_WIDTH: float = self.screen.get_width()
         self.S_HEIGHT: float = self.screen.get_height()
         self.center: tuple[float, float] = (self.S_WIDTH / 2, self.S_HEIGHT / 2)
-        self.SCORE = SCORE
+        self.SCORE = SCORE(GameConfig)
 
         # Fonts
-        self.font: pygame.font = pygame.font.Font(None, 36)
-        self.bigFont: pygame.font = pygame.font.Font(None, 150)
+        self.font: pygame.font.Font = pygame.font.Font(None, 36)
+        self.bigFont: pygame.font.Font = pygame.font.Font(None, 150)
 
         self.WHITE: tuple[int, int, int] = (255, 255, 255)
         self.BLACK: tuple[int, int, int] = (0, 0, 0)
@@ -73,6 +73,4 @@ class GameConfig:
 
 
 if __name__ == '__main__':
-    from file_runner import runFile
-
-    runFile('PONG.py')
+    exec(open('PONG.py', 'r').read(), globals())
