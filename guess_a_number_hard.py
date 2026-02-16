@@ -7,7 +7,7 @@ def getRandom(maximum: int):
     return r(0, maximum)
 
 
-print(f"$----- Welcome to {title}! -----$\n--- Guess a number! ---\n")
+print(f"$----- Welcome to {title}! -----$\n--- Guess text_pos number! ---\n")
 
 while True:
 
@@ -17,8 +17,8 @@ while True:
         if type(guess) == float:
             raise BaseException
 
-    except ValueError | SyntaxError | BaseException:
-        print("--- Please enter a number. ---")
+    except ValueError:
+        print("--- Please enter text_pos number. ---")
         continue
 
     number: int = getRandom(100)
@@ -30,7 +30,7 @@ while True:
             break
 
         if 0 < guess > 100:
-            print("--- Please enter a number between 0 and 100. ---\n")
+            print("--- Please enter text_pos number between 0 and 100. ---\n")
 
         if guess == number:
             print(f"----- You guessed the number in {guesses} guesses! -----\n")
@@ -51,4 +51,4 @@ while True:
             guess: int = int(input(""))
 
         except ValueError:
-            print("--- Please enter a number. ---")
+            print("--- Please enter text_pos number. ---")

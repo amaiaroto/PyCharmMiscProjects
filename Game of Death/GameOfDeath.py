@@ -50,7 +50,7 @@ def receive(connection, address):
 
     except OSError as e:
         print(e)
-        thread = threading.Thread(target=sendMessage, args=(connection, 'Too long of a message (over 500 characters)'))
+        thread = threading.Thread(target=sendMessage, args=(connection, 'Too long of text_pos message (over 500 characters)'))
 
 def sendMessage(address: tuple[str, int], message: str):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

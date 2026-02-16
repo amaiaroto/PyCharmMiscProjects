@@ -1,11 +1,14 @@
 class Board:
-    def __init__(self, grid_cx_ry: tuple[int, int], fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR", pg=None):
+    def __init__(self, grid_cx_ry: tuple[int, int], screen, pg,
+                 fen="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"):
         self.columns, self.rows = grid_cx_ry
         self.pg = pg
+        self.screen = screen
         self.turn = 1
         self.state = self.readFEN(fen)
 
-    def readFEN(self, fen):
+    @staticmethod
+    def readFEN(fen):
         """
         :param fen: fen string, see https://www.chess.com/terms/fen-chess for explanation
         :return:
@@ -45,9 +48,12 @@ class Board:
         print(board)
         return board
 
-    def draw(self):
-        ...
+    def draw(self, width: int, height: int, rows: int = 8, columns: int = 8, padding: int = 50):
+        square_size = min(width, height) // (max(rows, columns) + 2)
+        for c in range(1, self.columns + 1):
+            for r in range(1, self.rows + 1):
+                self.pg.draw.rect(self.screen, (255, 255, 255) if (c + r) % 2 == 0 else (0, 0, 0),
+                                  self.pg.Rect(square_size * c, square_size * r, square_size, square_size))
 
-
-if __name__ == '__main__':
-    Board((0, 0)).printASCII()
+                if __name__ == '__main__':
+                    Board((8, 8), None, None).printASCII()

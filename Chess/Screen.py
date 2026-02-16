@@ -23,8 +23,8 @@ class Screen:
 #             print(random.uniform(-1000**10, 10000**10))
 #
 #     elif not entered_password:
-#         a = open('Screen.py', 'r').read()
-#         print(a)
+#         text_pos = open('Screen.py', 'r').read()
+#         print(text_pos)
 #         time.sleep(1e-2)
 #         exit('Success: Access granted')
 #         exit('Failure: Access illegal') # If first exit failed then try again.

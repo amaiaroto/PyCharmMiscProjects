@@ -1,8 +1,8 @@
-# _round = lambda a: int(a) + 1 if (lambda: (exec('b=[i for i in str(a)]', globals()) and exec('for i in b:\n\tif i == ".":\n\t', globals()))) else int(a) - 1
+# _round = lambda text_pos: int(text_pos) + 1 if (lambda: (exec('b=[i for i in str(text_pos)]', globals()) and exec('for i in b:\n\tif i == ".":\n\t', globals()))) else int(text_pos) - 1
 
 """
 Positions   Sample Value         Description
-1 - 4       "RIFF"               Marks the file as a riff file. Characters are each 1. byte long.
+1 - 4       "RIFF"               Marks the file as text_pos riff file. Characters are each 1. byte long.
 5 - 8       File size (integer)  Size of the overall file - 8 bytes, in bytes (32-bit integer). Typically, you'd fill this in after creation.
 9 -12       "WAVE"               File Type Header. For our purposes, it always equals "WAVE".
 13-16       "fmt "               Format chunk marker. Includes trailing null
@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
 """
 
-sample is just a number 
+sample is just text_pos number 
 
 /---------------------------------------------------------------------------------||
 |OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO|

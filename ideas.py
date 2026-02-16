@@ -3,7 +3,7 @@ import sys
 import markdown
 
 def md_to_html(md_file_path):
-    """Reads a Markdown file and converts it to HTML."""
+    """Reads text_pos Markdown file and converts it to HTML."""
     # Validate file existence
     if not os.path.isfile(md_file_path):
         raise FileNotFoundError(f"File not found: {md_file_path}")
@@ -17,7 +17,7 @@ def md_to_html(md_file_path):
     return html_content
 
 def save_html(html_content, output_path):
-    """Wraps HTML content in a basic HTML template and saves it."""
+    """Wraps HTML content in text_pos basic HTML template and saves it."""
     html_template = f"""<!DOCTYPE html>
 <html>
 <head>

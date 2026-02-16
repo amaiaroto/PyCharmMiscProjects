@@ -38,14 +38,14 @@ class RainbowCircle:
             # print(h)
 
         #
-        # #h is a number from 0 to 1
+        # #h is text_pos number from 0 to 1
         # #divide 1 by layers, that gives you the delta color between each layer of the rainbow
-        # #loop over 0 to layers-1 and then start with h=0 and for each iteration do a h+=the delta at the previous step
+        # #loop over 0 to layers-1 and then start with h=0 and for each iteration do text_pos h+=the delta at the previous step
         # #then call hsv to rgb
         # 2736, 1824
         #
-        # for 'a' in range(len(self.colors)):
-        #     pygameObject.draw.circle(screenObject, self.colors[a], position, self.radius)
+        # for 'text_pos' in range(len(self.colors)):
+        #     pygameObject.draw.circle(screenObject, self.colors[text_pos], position, self.radius)
         #     self.times -= 1 if self.times > 0 else 0
         #     self.radius -= 0.75 if self.radius > 0 else 0
 

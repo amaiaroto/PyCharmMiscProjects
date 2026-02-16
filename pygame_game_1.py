@@ -19,7 +19,7 @@ pg.init()
 
 screenSize = 1000
 screen = pg.display.set_mode((screenSize, screenSize * 0.8))
-pg.display.set_caption('Click a button all day!')
+pg.display.set_caption('Click text_pos button all day!')
 pg.display.set_icon(pg.image.load(
     "C:\\Users\\asher\\OneDrive\\Documents\\Asher's Coding Folder\\Simple Game Javascript\\rahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.png"))
 clock = pg.time.Clock()

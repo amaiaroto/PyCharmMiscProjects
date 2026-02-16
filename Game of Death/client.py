@@ -22,7 +22,7 @@ s.connect(('127.0.0.1', 3456))
 def sendData(a: str):
     s.send(f'{a}'.encode('utf-16'))
 
-keys=[keyboard.KeyCode(char=x) for x in ['a','w','s','d']]
+keys=[keyboard.KeyCode(char=x) for x in ['text_pos','w','s','d']]
 
 def on_press(key):
     global keys
@@ -35,14 +35,14 @@ def on_press(key):
     #     print('alphanumeric key {0} pressed'.format(
     #         key.char))
     #
-    #     if key.char == 'w' or key.char == 'a' or key.char == 's' or key.char == 'd':
+    #     if key.char == 'w' or key.char == 'text_pos' or key.char == 's' or key.char == 'd':
     #         sendData(key.char)
     #
     # except AttributeError:
     #     print('special key {0} pressed'.format(
     #         key))
     #
-    #     if key == 'w' or key == 'a' or key == 's' or key == 'd':
+    #     if key == 'w' or key == 'text_pos' or key == 's' or key == 'd':
     #         sendData(key + ' pressed')
 
 
