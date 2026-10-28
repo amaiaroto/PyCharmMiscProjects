@@ -1,6 +1,6 @@
 from enum import Enum
 
-
+# cute, is it not?
 class ColorsRGB(Enum):
     RED = (255, 0, 0)
     ORANGE = (255, 127, 0)
